@@ -28,3 +28,54 @@
 [submodule "link/.vim/bundle/ag.vim"]
 	path = link/.vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
+[submodule "link/.vim/bundle/auto-pairs"]
+	path = link/.vim/bundle/auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs.git
+[submodule "link/.vim/bundle/command-t"]
+	path = link/.vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "link/.vim/bundle/ctrlp.vim"]
+	path = link/.vim/bundle/ctrlp.vim
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "link/.vim/bundle/editorconfig-vim"]
+	path = link/.vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "link/.vim/bundle/nerdcommenter"]
+	path = link/.vim/bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "link/.vim/bundle/nerdtree"]
+	path = link/.vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "link/.vim/bundle/syntastic"]
+	path = link/.vim/bundle/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule "link/.vim/bundle/tabular"]
+	path = link/.vim/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "link/.vim/bundle/vim-go"]
+	path = link/.vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git
+[submodule "link/.vim/bundle/vim-haskell"]
+	path = link/.vim/bundle/vim-haskell
+	url = git@github.com:wlangstroth/vim-haskell.git
+[submodule "link/.vim/bundle/vim-javascript"]
+	path = link/.vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "link/.vim/bundle/vim-jsx"]
+	path = link/.vim/bundle/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
+[submodule "link/.vim/bundle/vim-orbital"]
+	path = link/.vim/bundle/vim-orbital
+	url = git@github.com:fcpg/vim-orbital
+[submodule "link/.vim/bundle/vim-repeat"]
+	path = link/.vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "link/.vim/bundle/vim-surround"]
+	path = link/.vim/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "link/.vim/bundle/wordpress.vim"]
+	path = link/.vim/bundle/wordpress.vim
+	url = git@github.com:dsawardekar/wordpress.vim.git
+[submodule "link/.vim/bundle/yajs.vim"]
+	path = link/.vim/bundle/yajs.vim
+	url = git@github.com:othree/yajs.vim.git
