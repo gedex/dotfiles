@@ -7,4 +7,4 @@ export GOPATH="$HOME/code/go"
 PATH="$(path_remove $GOPATH/bin):$GOPATH/bin"
 PATH="$(path_remove $GOROOT/bin):$GOROOT/bin"
 
-test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}" || mkdir -p "${GOPATH}"
