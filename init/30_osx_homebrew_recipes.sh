@@ -6,8 +6,6 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
-  ansible
-  awscli
   bash
   composer
   coreutils
