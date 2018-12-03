@@ -23,6 +23,7 @@ casks=(
   hammerspoon
   firefox
   google-chrome
+  gpg-suite
   iterm2
   macvim
   skype
