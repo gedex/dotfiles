@@ -1,0 +1,8 @@
+[user]
+  name = Akeda Bagus
+  email = admin@gedex.web.id
+  signinkey =
+[gpg]
+  program = gpg
+[commit]
+  gpgsign = true

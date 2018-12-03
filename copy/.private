@@ -1,0 +1,7 @@
+# wp-tools (wpt).
+# Use GH personal access token.
+export WPT_GITHUB_TOKEN=""
+
+# goreleaser, wcer
+# Use GH personal access token.
+export GITHUB_TOKEN=""
