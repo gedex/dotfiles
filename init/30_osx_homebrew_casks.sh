@@ -20,6 +20,7 @@ casks=(
   # Applications
   docker
   dropbox
+  hammerspoon
   firefox
   google-chrome
   iterm2
