@@ -20,6 +20,7 @@ recipes=(
   ssh-copy-id
   the_silver_searcher
   tree
+  vim
   wget
   wifi-password
 )
