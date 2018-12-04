@@ -13,6 +13,7 @@ recipes=(
   gist
   git
   go
+  hub
   jq
   mercurial
   nmap
