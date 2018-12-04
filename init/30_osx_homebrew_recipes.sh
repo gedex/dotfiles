@@ -21,6 +21,7 @@ recipes=(
   the_silver_searcher
   tree
   wget
+  wifi-password
 )
 
 brew_install_recipes
