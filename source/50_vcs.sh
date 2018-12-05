@@ -40,3 +40,5 @@ if [ -z "$EDITOR" ]; then
 else
     alias gd="git diff | $EDITOR"
 fi
+
+export GPG_TTY=$(tty)
