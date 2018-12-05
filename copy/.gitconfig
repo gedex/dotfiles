@@ -1,7 +1,7 @@
 [user]
   name = Akeda Bagus
   email = akeda.bagus@automattic.com
-  signinkey = B21A9FC4B7761412
+  signingkey = B21A9FC4B7761412
 [gpg]
   program = gpg
 [commit]
