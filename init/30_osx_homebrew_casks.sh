@@ -20,11 +20,12 @@ casks=(
   # Applications
   docker
   dropbox
-  hammerspoon
   firefox
   google-chrome
   gpg-suite
+  hammerspoon
   iterm2
+  licecap
   macvim
   skype
   slack
