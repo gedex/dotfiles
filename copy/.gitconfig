@@ -1,3 +1,5 @@
+[init]
+  templatedir = ~/.git_template
 [user]
   name = Akeda Bagus
   email = akeda.bagus@automattic.com
@@ -8,3 +10,5 @@
   gpgsign = true
 [push]
   default = simple
+[alias]
+  ctags = !'.git/hooks/ctags'

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+dir="$(git rev-parse --git-dir)"
+trap 'rm -rf "$dir/$$.tags"' EXIT
+git ls-files | \
+	"${CTAGS:-ctags}" -L - -f"$dir/$$.tags" --languages=-sql
+mv "$dir/$$.tags" "$dir/tags"

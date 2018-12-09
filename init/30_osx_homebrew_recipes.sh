@@ -9,6 +9,7 @@ recipes=(
   bash
   composer
   coreutils
+  ctags
   gibo
   gist
   git
