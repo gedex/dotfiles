@@ -31,9 +31,6 @@
 [submodule "link/.vim/bundle/auto-pairs"]
 	path = link/.vim/bundle/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
-[submodule "link/.vim/bundle/command-t"]
-	path = link/.vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "link/.vim/bundle/ctrlp.vim"]
 	path = link/.vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git

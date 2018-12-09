@@ -87,13 +87,6 @@ if executable('ag')
 	let g:ctrlp_use_caching = 0
 endif
 
-" CommandT
-let g:CommandTTraverseSCM="pwd"
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTWildIgnore.=',**/.git/*'
-let g:CommandTWildIgnore.=',**/node_modules/*'
-let g:CommandTWildIgnore.=',**/vendors/*'
-
 " NERDTree
 let NERDTreeShowHidden=1
 
