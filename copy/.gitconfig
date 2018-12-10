@@ -49,9 +49,9 @@
   po = push origin
 
   # Pull request related. Depends on 'hub'.
-  pr = "!f() { hub pr list --format='%sC%>(8)%i%Creset  %Cyellow%>(15)%au%Creset  %t%  l%n'; }; f"
+  prl = "!f() { hub pr list --format='%sC%>(8)%i%Creset  %Cyellow%>(15)%au%Creset  %t%  l%n'; }; f"
   # Search PR by author.
-  pra = "!f() { hub pr list --format='%sC%>(8)%i%Creset  %Cyellow%>(15)%au%Creset  %t%  l%n' | grep \"#[0-9]*[[:space:]]*$1\"; }; f"
+  prla = "!f() { hub pr list --format='%sC%>(8)%i%Creset  %Cyellow%>(15)%au%Creset  %t%  l%n' | grep \"#[0-9]*[[:space:]]*$1\"; }; f"
 
   # Status
   s = status -s
