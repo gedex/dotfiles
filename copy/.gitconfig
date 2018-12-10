@@ -11,4 +11,48 @@
 [push]
   default = simple
 [alias]
+  a = add
+  all = add -A
+
+  b = branch
+  ba = branch -a
+
+  c = commit -S -v
+  ca = !git add -A && git commit -av
+
+  cl = clone
+
+  # Checkout.
+  co = checkout
+  cob = checkout -b
+  # Fetch from upstram then checkout.
+  cobu = "!f() { git fetch origin $1 && git checkout $1; }; f"
+
+  # Run ctags.
   ctags = !'.git/hooks/ctags'
+
+  # Deletions.
+  # Discard changes.
+  dc = checkout -- .
+  # Delete merged branches.
+  dm = "!git branch --merged | grep -v '\\*' || xargs -n 1 git branch -d"
+
+  # Finds.
+  # Find commits by commit message.
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+  # Pull.
+  l = pull
+
+  # Push.
+  p = push
+  po = push origin
+
+  # Pull request related. Depends on 'hub'.
+  pr = "!f() { hub pr list --format='%sC%>(8)%i%Creset  %Cyellow%>(15)%au%Creset  %t%  l%n'; }; f"
+  # Search PR by author.
+  pra = "!f() { hub pr list | grep '#[0-9]*[[:space:]]*$1'; }; f"
+
+  # Status
+  s = status -s
+  st = status
