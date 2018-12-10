@@ -17,4 +17,5 @@ else
     alias gd="git diff | $EDITOR"
 fi
 
+export GITHUB_USERNAME=gedex
 export GPG_TTY=$(tty)
