@@ -37,7 +37,7 @@
   # Discard changes.
   dc = checkout -- .
   # Delete merged branches.
-  dm = "!git branch --merged | grep -v '\\*' || xargs -n 1 git branch -d"
+  dm = "!git branch --merged | egrep -v '(^\\*|master|dev|develop|staging|production)' | xargs git branch -d"
 
   # Finds.
   # Find commits by commit message.
