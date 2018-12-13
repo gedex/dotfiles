@@ -82,3 +82,6 @@
 [submodule "link/.vim/bundle/vim-rhubarb"]
 	path = link/.vim/bundle/vim-rhubarb
 	url = git@github.com:tpope/vim-rhubarb.git
+[submodule "link/.vim/bundle/vim-aftercolors"]
+	path = link/.vim/bundle/vim-aftercolors
+	url = git@github.com:calvinchengx/vim-aftercolors.git
