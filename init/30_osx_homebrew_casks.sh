@@ -25,6 +25,7 @@ casks=(
   gpg-suite
   hammerspoon
   iterm2
+  java
   licecap
   macvim
   skype

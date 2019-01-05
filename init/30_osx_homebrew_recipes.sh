@@ -16,6 +16,7 @@ recipes=(
   go
   hub
   jq
+  maven
   mercurial
   nmap
   postgresql
