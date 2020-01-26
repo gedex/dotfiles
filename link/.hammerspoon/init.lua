@@ -4,6 +4,10 @@ local hyper = {"ctrl", "alt", "cmd"}
 hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
+-- Pomodoro
+hs.loadSpoon("Pomodoro")
+spoon.Pomodoro:init()
+
 -- Miro's windows manager.
 hs.loadSpoon("MiroWindowsManager")
 
