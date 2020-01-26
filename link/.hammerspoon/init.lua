@@ -1,5 +1,9 @@
 local hyper = {"ctrl", "alt", "cmd"}
 
+-- Smart configuration reloading
+hs.loadSpoon("ReloadConfiguration")
+spoon.ReloadConfiguration:start()
+
 -- Miro's windows manager.
 hs.loadSpoon("MiroWindowsManager")
 
