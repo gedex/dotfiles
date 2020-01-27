@@ -38,9 +38,16 @@ local function createMenu()
 end
 
 local function updateDisplay()
+	local mode
+	if state.currentMode == "work" then
+		mode = "💻"
+	else
+		mode = "🛏"
+	end
+
 	local min = math.floor(state.timeLeft / minuteInSeconds)
 	local sec = math.floor(state.timeLeft % minuteInSeconds)
-	local str = string.format("( %s | %02d:%02d | %02d )", state.currentMode, min, sec, state.totalWork)
+	local str = string.format("( %s %s | ⏱ %02d:%02d | 🍅 x %d )", mode, state.currentMode, min, sec, state.totalWork)
 	state.menu:setTitle(str)
 end
 
