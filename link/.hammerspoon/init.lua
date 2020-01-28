@@ -4,6 +4,10 @@ local hyper = {"ctrl", "alt", "cmd"}
 hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
+-- Fokus
+hs.loadSpoon("Fokus")
+spoon.Fokus:init()
+
 -- Pomodoro
 hs.loadSpoon("Pomodoro")
 spoon.Pomodoro:init()
