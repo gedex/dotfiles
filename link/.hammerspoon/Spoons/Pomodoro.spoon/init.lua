@@ -31,24 +31,38 @@ local state = {
 	disableCount = 0
 }
 
+local function appEmoji()
+	local emoji = "◉"
+	if state.isActive == false then
+		emoji = "◎"
+	end
+	return emoji
+end
+
+local function appTooltip()
+	local s = "active"
+	if state.isActive == false then
+		s = "inactive"
+	end
+	return string.format("Pomodoro %s", s)
+end
+
+local function appTitle()
+	local min = math.floor(state.timeLeft / minuteInSeconds)
+	local sec = math.floor(state.timeLeft % minuteInSeconds)
+	return string.format("( %s %s | ⏱ %02d:%02d | 🍅 x %d )", appEmoji(), state.currentMode, min, sec, state.totalWork)
+end
+
 local function createMenu()
 	if state.menu == nil then
 		state.menu = hs.menubar.new()
+		state.menu:setTooltip(appTooltip())
 	end
 end
 
 local function updateDisplay()
-	local mode
-	if state.currentMode == "work" then
-		mode = "💻"
-	else
-		mode = "🛏"
-	end
-
-	local min = math.floor(state.timeLeft / minuteInSeconds)
-	local sec = math.floor(state.timeLeft % minuteInSeconds)
-	local str = string.format("( %s %s | ⏱ %02d:%02d | 🍅 x %d )", mode, state.currentMode, min, sec, state.totalWork)
-	state.menu:setTitle(str)
+	state.menu:setTitle(appTitle())
+	state.menu:setTooltip(appTooltip())
 end
 
 local function disable()
@@ -58,6 +72,7 @@ local function disable()
 	if (state.disableCount == 0) then
 		if wasActive then
 			state.timer:stop()
+			updateDisplay()
 		end
 	elseif (state.disableCount == 1) then
 		state.timeLeft = workInSeconds
