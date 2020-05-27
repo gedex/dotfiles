@@ -1,7 +1,7 @@
 " Pathogen.
 "
 " To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = ["vim-snippets"]
+" let g:pathogen_disabled = ["vim-snippets"]
 call pathogen#infect()
 
 " Filetypes.
