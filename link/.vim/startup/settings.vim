@@ -90,9 +90,6 @@ endif
 " NERDTree
 let NERDTreeShowHidden=1
 
-" vim-syntastic
-let g:syntastic_php_checkers = ['php']
-
 autocmd FileType vim noremap <F5> :s/^/"/<CR>
 autocmd FileType vim noremap <F6> :s/^"//<CR>
 
