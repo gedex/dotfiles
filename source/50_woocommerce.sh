@@ -15,7 +15,7 @@ wcez() {
 	fi
 
 	local slug dst tag tmp
-	local branch="master"
+	local branch="trunk"
 	local current=`pwd`
 
 	while [ "$1" ]; do
