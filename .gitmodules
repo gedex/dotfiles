@@ -91,3 +91,6 @@
 [submodule "link/.vim/bundle/vim-snippets"]
 	path = link/.vim/bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "link/.vim/bundle/dart-vim-plugin"]
+	path = link/.vim/bundle/dart-vim-plugin
+	url = git@github.com:dart-lang/dart-vim-plugin.git
