@@ -37,6 +37,7 @@
 [submodule "link/.vim/bundle/editorconfig-vim"]
 	path = link/.vim/bundle/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
+	ignore = untracked
 [submodule "link/.vim/bundle/nerdcommenter"]
 	path = link/.vim/bundle/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
