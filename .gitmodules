@@ -95,3 +95,6 @@
 [submodule "link/.vim/bundle/dart-vim-plugin"]
 	path = link/.vim/bundle/dart-vim-plugin
 	url = git@github.com:dart-lang/dart-vim-plugin.git
+[submodule "link/.vim/bundle/vdebug"]
+	path = link/.vim/bundle/vdebug
+	url = git@github.com:vim-vdebug/vdebug.git
