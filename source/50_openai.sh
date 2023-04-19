@@ -3,7 +3,7 @@
 openai_request() {
 	local model=$1
 	local prompt=$2
-	local body='{"model": "'$model'","prompt": "'$prompt'","temperature": 0,"max_tokens": 100,"top_p": 1,"frequency_penalty": 0.0,"presence_penalty": 0.0,"stop": ["\n"]}'
+	local body='{"model": "'$model'","prompt": "'$prompt'","temperature": 0,"max_tokens": 100,"top_p": 1,"frequency_penalty": 0.0,"presence_penalty": 0.0}'
 
 	curl -s https://api.openai.com/v1/completions \
 		-H "Content-Type: application/json" \
