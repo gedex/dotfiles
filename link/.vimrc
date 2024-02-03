@@ -10,7 +10,6 @@ filetype indent on
 
 " Load custom settings.
 source ~/.vim/startup/color.vim
-source ~/.vim/startup/go.vim
 source ~/.vim/startup/haskell.vim
 source ~/.vim/startup/js.vim
 source ~/.vim/startup/php.vim
