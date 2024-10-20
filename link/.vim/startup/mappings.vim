@@ -25,12 +25,6 @@ nmap <Leader>h :tabnew %:h<CR>
 " Remove trailing whitespaces.
 noremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" Custom comma motion mapping.
-nmap di, f,dT,
-nmap ci, f,cT,
-nmap da, f,ld2F,i,<ESC>l "delete argument
-nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
-
 nmap cu ct_
 nmap cU cf_
 
