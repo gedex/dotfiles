@@ -25,22 +25,8 @@ nmap <Leader>h :tabnew %:h<CR>
 " Remove trailing whitespaces.
 noremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" Upper or lowercase the current word.
-nmap g^ gUiW
-nmap gv guiW
-
 " Default to very magic.
 no / /\v
-
-" Tabular.
-if exists(":Tabularize")
-	nmap <Leader>a= :Tabularize /=<CR>
-	vmap <Leader>a= :Tabularize /=<CR>
-	nmap <Leader>a=> :Tabularize /=><CR>
-	vmap <Leader>a=> :Tabularize /=><CR>
-	nmap <Leader>a: :Tabularize /:\zs<CR>
-	vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 
 " NERDtree.
 map <C-n> :NERDTreeToggle<CR>
