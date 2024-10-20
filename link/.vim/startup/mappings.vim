@@ -22,9 +22,6 @@ imap <C-Tab> <ESC>:tabnext<CR>
 "noremap <F7> :set expandtab!<CR>
 nmap <Leader>h :tabnew %:h<CR>
 
-" Remove trailing whitespaces.
-noremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
 " Default to very magic.
 no / /\v
 
