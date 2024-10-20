@@ -82,9 +82,6 @@
 [submodule "link/.vim/bundle/vim-aftercolors"]
 	path = link/.vim/bundle/vim-aftercolors
 	url = git@github.com:calvinchengx/vim-aftercolors.git
-[submodule "link/.vim/bundle/ultisnips"]
-	path = link/.vim/bundle/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
 [submodule "link/.vim/bundle/vim-snippets"]
 	path = link/.vim/bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
