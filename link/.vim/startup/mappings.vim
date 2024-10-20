@@ -25,9 +25,6 @@ nmap <Leader>h :tabnew %:h<CR>
 " Remove trailing whitespaces.
 noremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-nmap cu ct_
-nmap cU cf_
-
 " Upper or lowercase the current word.
 nmap g^ gUiW
 nmap gv guiW
