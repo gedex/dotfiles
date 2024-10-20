@@ -45,36 +45,9 @@ set ttym=xterm2
 
 set wrap
 
-set tags=~/.vim/tags/tags
-
-if version > 720
-	set undofile
-	set undodir=~/vimundo/
-endif
-
 let mapleader='\'
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
 
 set noswapfile
-
-"let g:Powerline_symbols = 'fancy'
-"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ["<C-n>"]
-let g:ycm_key_list_previous_completion = ["<C-p>"]
-let g:SuperTabDefaultCompletionType = "<C-n>"
-
-" Better key bindings for UltiSnipsExandTrigger 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " CtrlP
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher.
@@ -89,10 +62,3 @@ endif
 
 " NERDTree
 let NERDTreeShowHidden=1
-
-autocmd FileType vim noremap <F5> :s/^/"/<CR>
-autocmd FileType vim noremap <F6> :s/^"//<CR>
-
-" nerdtree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
