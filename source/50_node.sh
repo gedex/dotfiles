@@ -55,3 +55,11 @@ function npm_install() {
     npm install -g "${modules[@]}"
   fi
 }
+
+# pnpm
+export PNPM_HOME="/Users/akeda/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
