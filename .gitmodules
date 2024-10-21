@@ -88,3 +88,6 @@
 [submodule "link/.vim/bundle/vdebug"]
 	path = link/.vim/bundle/vdebug
 	url = git@github.com:vim-vdebug/vdebug.git
+[submodule "link/.vim/bundle/editorconfig-vim"]
+	path = link/.vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
