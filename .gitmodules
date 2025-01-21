@@ -60,7 +60,7 @@
 	url = git@github.com:fcpg/vim-orbital
 [submodule "link/.vim/bundle/vim-repeat"]
 	path = link/.vim/bundle/vim-repeat
-	url = git://github.com/tpope/vim-repeat.git
+	url = git@github.com:tpope/vim-repeat.git
 [submodule "link/.vim/bundle/vim-surround"]
 	path = link/.vim/bundle/vim-surround
 	url = git@github.com:tpope/vim-surround.git
