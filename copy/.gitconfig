@@ -62,6 +62,9 @@
   # Checkout PR.
   prc = "!f() { hub pr checkout $1; }; f"
 
+  # rev-parse
+  rph = rev-parse HEAD
+
   # Status
   s = status -s
   st = status
