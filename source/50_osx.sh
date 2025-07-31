@@ -14,6 +14,9 @@ export PATH
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 
+# Copy last commit hash to clipboard
+alias cplc="git rev-parse HEAD | tr -d '\n' | pbcopy"
+
 # gnubin
 export GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
 PATH=$(path_remove $GNUBIN):$GNUBIN
