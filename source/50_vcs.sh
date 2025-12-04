@@ -17,5 +17,9 @@ else
     alias gd="git diff | $EDITOR"
 fi
 
+alias ghrr="gh pr list --search='is:open user-review-requested:@me'"
+alias ghpr="gh pr list --search='is:open author:@me'"
+alias ghe='HTTPS_PROXY="http://127.0.0.1:8080" gh'
+
 export GITHUB_USERNAME=gedex
 export GPG_TTY=$(tty)
