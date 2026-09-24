@@ -1,8 +1,8 @@
 # OSX-only stuff. Abort if not OSX.
 is_osx || return 1
 
-# APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
+# Keep Homebrew ahead of /usr/bin.
+PATH="/opt/homebrew/bin:$(path_remove /opt/homebrew/bin)"
 export PATH
 
 # Trim new lines and copy to clipboard
@@ -18,5 +18,5 @@ alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resou
 alias cplc="git rev-parse HEAD | tr -d '\n' | pbcopy"
 
 # gnubin
-export GNUBIN="/usr/local/opt/coreutils/libexec/gnubin"
+export GNUBIN="/opt/homebrew/opt/coreutils/libexec/gnubin"
 PATH=$(path_remove $GNUBIN):$GNUBIN
