@@ -1,7 +1,7 @@
 export PATH
 
 # Go Workspace.
-export GOROOT="$(brew --prefix golang)/libexec"
+export GOROOT="$(brew --prefix go 2>/dev/null)/libexec"
 export GOPATH="$HOME/code/go"
 
 PATH="$(path_remove $GOPATH/bin):$GOPATH/bin"
