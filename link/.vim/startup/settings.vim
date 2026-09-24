@@ -51,13 +51,20 @@ set noswapfile
 
 " CtrlP
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher.
-if executable('ag')
+"if executable('ag')
 	" Use ag in CtrlP for listing files. Lightning fast and respects
 	" .gitignore.
-	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 	" Ag is fast enough that CtrlP doesn't need to cache.
+"	let g:ctrlp_use_caching = 0
+"endif
+" Use ripgrep (rg)
+if executable('rg')
+	let g:ctrlp_user_command = 'rg --files --color=never --glob "" %s'
 	let g:ctrlp_use_caching = 0
+else
+	let g:ctrlp_clear_cache_on_exit = 0
 endif
 
 " NERDTree
