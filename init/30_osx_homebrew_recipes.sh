@@ -36,7 +36,7 @@ brew_install_recipes
 local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
 
 # bash
-if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
+if [[ "$(type -P $binroot/bash)" ]] && ! grep -qx "$binroot/bash" /etc/shells; then
   e_header "Adding $binroot/bash to the list of acceptable shells"
   echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
 fi
