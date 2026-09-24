@@ -1,33 +1,27 @@
-[[ "$1" != init && ! -e ~/.nave ]] && return 1
+export NVM_DIR=~/.nvm
+[[ "$1" != init && ! -s "$NVM_DIR/nvm.sh" ]] && return 1
 
-export PATH
-PATH=~/.nave/installed/default/bin:"$(path_remove ~/.nave/installed/*/bin)"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
-# Set a specific version of node as the "default" for "nave use default"
-function nave_default() {
-  local version
-  local default=${NAVE_DIR:-$HOME/.nave}/installed/default
-  [[ ! "$1" ]] && echo "Specify a node version or \"latest\"" && return 1
-  [[ "$1" == "latest" ]] && version=$(nave latest) || version=${1#v}
-  rm "$default" 2>/dev/null
-  ln -s $version "$default"
-  echo "Nave default set to $version"
+# Install nvm if it isn't already installed.
+function nvm_setup() {
+  [[ -s "$NVM_DIR/nvm.sh" ]] && return
+  e_header "Installing nvm"
+  # PROFILE=/dev/null keeps the installer from appending to shell rc files;
+  # this file loads nvm instead.
+  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | PROFILE=/dev/null bash
+  source "$NVM_DIR/nvm.sh"
 }
 
 # Install a version of node, set as default, install npm modules, etc.
-function nave_install() {
-  local version
+function node_install() {
   [[ ! "$1" ]] && echo "Specify a node version or \"latest\"" && return 1
-  [[ "$1" == "latest" ]] && version=$(nave latest) || version=${1#v}
-  if [[ ! -d "${NAVE_DIR:-$HOME/.nave}/installed/$version" ]]; then
-    e_header "Installing Node.js $version"
-    nave install $version
-  fi
-  [[ "$1" == "latest" ]] && nave_default latest && npm_install
+  local version=$1
+  [[ "$version" == "latest" ]] && version=node
+  e_header "Installing Node.js $1"
+  nvm install "$version" && nvm alias default "$version" && npm_install
 }
-
-# Use the version of node in the local .nvmrc file
-alias nvmrc='exec nave use $(<.nvmrc)'
 
 # Global npm modules to install.
 npm_globals=(
